@@ -20,6 +20,10 @@
     }
     location.search = query;  // page will be refreshed
   }
+  
+  var document.showdown  = require('showdown'),
+    document.converter = new showdown.Converter(),
+
 
   document.getElementById('submit').onclick = submit;
   document.onkeypress = function (e) {
@@ -47,7 +51,10 @@
   .then(function (res) {
     return res.json().then(function (body) {
       if (res.status === 200) {
-        return body;
+
+    
+    html      = converter.makeHtml(body);
+        return html;
       }
       console.log(res, body); // debug
       throw new Error('Gist <strong>' + gistId + '</strong>, ' + body.message.replace(/\(.*\)/, ''));
