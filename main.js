@@ -21,8 +21,8 @@
     location.search = query;  // page will be refreshed
   }
   
-  var document.showdown  = require('showdown'),
-    document.converter = new showdown.Converter(),
+  var document.showdown  = require('showdown');
+    document.converter = new showdown.Converter();
 
 
   document.getElementById('submit').onclick = submit;
